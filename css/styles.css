@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
+/*comando :root serve para que seja criado váriaveis dentro do css*/
+:root {
+    --bg-fundo: #ddd;
+    --color-primary-header: #4d41c0;
+    --cor-fonte-cabecalho: #fff;
+}
+
+
 *{
     /*a tag asteristico significa que tudo adicionado dentro irá aplicar a todo corpo do site*/
     font-family: 'Open Sans', sans-serif;
@@ -7,15 +15,28 @@
     box-sizing: border-box;
 }
 
+/*esse bloco abaixo foi criado pois o bootstrap esta subscrevendo o css e isso esta gerando
+algumas margens nas tags h1 e etc do header e do corpo do site, e para solucionar esse problema
+criado o bloco para que se aplique em todos as tags h1 com o paramêtro de margem 0*/
+h1, h1, h3, h4, h5, h6 {
+    margin: 0;
+}
+
 html, body {
     /*cor abaixo muda a cor de fundo de todo o site para um cinza*/
-    background-color: #ddd;
+    /*a váriavel criada acima foi adicionada nos paramêtros abaixo*/
+    background-color: var(--bg-fundo);
 }
 
 header {
-    background-color: #4D41C0;
-    color: #fff;
-    /* tag color dentro do cabeçalho significa que as cores dos conteúdos de frente serão mudadas para branco*/
+    background-color: var(--color-primary-header);
+    /* comando color dentro do cabeçalho significa que as cores dos conteúdos de frente serão mudadas para branco*/
+    color: var(--cor-fonte-cabecalho);
+    /*comando height: , significa a altura do conteudo, no caso foi utilizado o paramêtro de 60 pixels pra definir a altura desse conteúdo*/
+    height: 60px;
+    display: flex;
+    align-items: center;
+    
 }
 
 nav {
@@ -27,10 +48,33 @@ nav {
     justify-content: space-between;
 }
 
+nav h1 {
+    /*altera tudo que estiver dentro do "h1" que esta dentro do "nav" no html*/
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav a {
+    /*altera tudo que estiver dentro da tag "a" que esta dentro do "nav" no html*/
+    font-size: 12px;
+    font-weight: 400;
+}
+
 a, a:hover {
     /* a tag a:hover significa que ira remover o efeito quando o mouse passa em cima do link e muda de cor, ira remover esse efeito*/
     text-decoration: none;
     /* o comando text-decoration: none; significa que remove todas decorações do texto, no caso foi removido o sublinhado embaixo*/
     color: unset;
     /*o comando color: unset; significa que não foi setado nenhuma cor ao texto do link*/
+}
+
+/*bloco de estilização referente a classe da "div" criada no "nav" dentro do HTML*/
+.contato-container {
+    display: flex;
+    align-items: center;
+}
+
+.contato-container img {
+    /*altera tudo que estiver dentro da div class ".contato-container" e que for uma imagem */
+    margin-right: 10px;
 }
