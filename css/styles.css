@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 *{
+    /*a tag asteristico significa que tudo adicionado dentro irá aplicar a todo corpo do site*/
     font-family: 'Open Sans', sans-serif;
+    /*serve para que a borda dos elementos não ocupe a area do site*/
+    box-sizing: border-box;
+}
+
+html, body {
+    /*cor abaixo muda a cor de fundo de todo o site para um cinza*/
+    background-color: #ddd;
+}
+
+header {
+    background-color: #4D41C0;
+    color: #fff;
+    /* tag color dentro do cabeçalho significa que as cores dos conteúdos de frente serão mudadas para branco*/
+}
+
+nav {
+    /*comando display: flex serve para pegar um texto ou item e adicionar ao lado de outro*/
+    display: flex;
+    /*comando align-items: center serve para centralizar o texto/itens*/
+    align-items: center;
+    /*comando justify-content: serve para separa itens e texto nas duas extremidades do corpor do site, no caso foi para esquerda e direita*/
+    justify-content: space-between;
+}
+
+a, a:hover {
+    /* a tag a:hover significa que ira remover o efeito quando o mouse passa em cima do link e muda de cor, ira remover esse efeito*/
+    text-decoration: none;
+    /* o comando text-decoration: none; significa que remove todas decorações do texto, no caso foi removido o sublinhado embaixo*/
+    color: unset;
+    /*o comando color: unset; significa que não foi setado nenhuma cor ao texto do link*/
 }
