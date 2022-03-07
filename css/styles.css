@@ -5,6 +5,7 @@
     --bg-fundo: #ddd;
     --color-primary-header: #4d41c0;
     --cor-fonte-cabecalho: #fff;
+    --cor-bg-card: #fff;
 }
 
 
@@ -57,6 +58,7 @@ nav h1 {
 nav a {
     /*altera tudo que estiver dentro da tag "a" que esta dentro do "nav" no html*/
     font-size: 12px;
+    /* weight = peso da fonte*/
     font-weight: 400;
 }
 
@@ -69,12 +71,28 @@ a, a:hover {
 }
 
 /*bloco de estilização referente a classe da "div" criada no "nav" dentro do HTML*/
-.contato-container {
+.dsmovie-contato-container {
     display: flex;
     align-items: center;
 }
 
-.contato-container img {
+.dsmovie-contato-container img {
     /*altera tudo que estiver dentro da div class ".contato-container" e que for uma imagem */
     margin-right: 10px;
+}
+
+.dsmovie-card-filme{
+    /*width = largura do conteudo/item*/
+    width: 360px;
+    /*height = altura do conteudo/item*/
+    height: 400px;
+    background-color: var(--cor-bg-card);
+}
+
+/*id da section criado no HTML*/
+#dsmovie-card-list {
+    /*o comando padding serve para dar um espaçamento de um conteudo/item entre outro conteúdo/item
+    exemplo: nesse caso estamos dando um espaço de 40px em cima e 0px nas laterais entre o card e o header*/
+    padding: 40px 0;
+
 }
